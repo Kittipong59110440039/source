@@ -3,11 +3,14 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import '@/assets/scss/main.scss'
+import SidebarPlugin from './plugins/SidebarPlugin/index'
 import BootstrapVue from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
+import "./assets/scss/style.scss";
 
 Vue.use(BootstrapVue)
+Vue.use(SidebarPlugin)
 
 Vue.config.productionTip = false
 

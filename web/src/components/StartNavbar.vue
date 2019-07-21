@@ -1,24 +1,22 @@
 <template lang="html">
-  <b-navbar toggleable="sm" class="fixed-top py-0 px-0" type="dark" variant="info">
+  <b-navbar toggleable="sm" class="fixed-top py-0 px-0" type="dark" variant="info" id="navbar_start">
     <div class="text-center navbar-brand-wrapper d-flex align-items-top justify-content-center">
-      <a class="navbar-brand brand-logo" href="/"><img src="../assets/images/logo.svg" alt="logo"/></a>
-      <a class="navbar-brand brand-logo-mini" href="/"><img src="../assets/images/logo-mini.svg" alt="logo"/></a>
+      <a class="navbar-brand brand-logo brand-img-full" href="/" ><img src="../assets/images/logo.svg" alt="logo"/></a>
+      <a class="navbar-brand brand-logo brand-img-mini" href="/" ><img src="../assets/images/logo-mini.svg" style="width:50px" alt="logo"/></a>
     </div>
-    <b-navbar-nav>
-      <b-nav-item href="#" class="px-2"><i class="fa fas fa-bars text-white"></i></b-nav-item>
+    <b-navbar-nav class="nav-toggle-sidebar">
+      <b-nav-item @click="toggleSidebar()" class="px-2 "><i class="fa fas fa-bars text-white"></i></b-nav-item>
+      
     </b-navbar-nav>
-    <b-navbar-toggle target="nav-collapse"><i class="fa fas fa-sort-down text-white"></i></b-navbar-toggle>
-
-    <b-collapse is-nav id="nav_collapse">
-      <b-navbar-nav class="ml-auto">
+    <b-navbar-nav class="ml-auto mr-3">
         <b-nav-item-dropdown right class="preview-list">
           <template slot="button-content">
             <div class="count-indicator">
-              <i class="icon mdi mdi-email-variant"></i>
+              <i class="icon mdi mdi-bell-ring"></i>
               <span class="count">7</span>
             </div>
           </template>
-          <b-dropdown-item class="preview-item" href="#">
+          <b-dropdown-item class="preview-item header" href="#">
             <p class="mb-0 font-weight-normal float-left">You have 4 new notifications
             </p>
             <span class="badge badge-pill badge-warning float-right">View all</span>
@@ -49,41 +47,42 @@
               </p>
             </div>
           </b-dropdown-item>
-          <b-dropdown-item class="preview-item" href="#">
-            <div class="preview-thumbnail">
-              <div class="preview-icon bg-info">
-                <i class="mdi mdi-email-outline mx-0"></i>
-              </div>
+        </b-nav-item-dropdown>
+        <b-nav-item-dropdown right class="flag-list">
+          <template slot="button-content" >
+            <div class="count-indicator img-flag">
+              <img class=" mr-1" src="../assets/images/flags/EN.svg" style="width:30px;" alt="Flag image">
+              <!-- <span>Kittipong</span> -->
             </div>
-            <div class="preview-item-content">
-              <h6 class="preview-subject font-weight-medium">New user registration</h6>
-              <p class="font-weight-light small-text">
-                2 days ago
-              </p>
-            </div>
-          </b-dropdown-item>
+          </template>
+          <b-dropdown-item href="#" class="flag-item active"><img class=" mr-1" src="../assets/images/flags/EN.svg" style="width:30px;" alt="Flag image">&nbsp;English</b-dropdown-item>
+          <b-dropdown-item href="#" class="flag-item "><img class=" mr-1" src="../assets/images/flags/TH.jpg" style="width:30px;" alt="Flag image">&nbsp;Thai</b-dropdown-item>
         </b-nav-item-dropdown>
         <b-nav-item-dropdown right>
           <template slot="button-content">
-            <div class="count-indicator">
-              <i class="icon mdi mdi-bell-ring"></i>
-              <span class="count">4</span>
+            <div class="count-indicator img-user">
+              <img class="img-xs rounded-circle mr-2" src="../assets/images/faces/face4.jpg" style="width:30px;height:30px;" alt="profile image">
+              <span>Kittipong</span>
             </div>
           </template>
           <b-dropdown-item href="#">Profile</b-dropdown-item>
           <b-dropdown-item href="#">Signout</b-dropdown-item>
         </b-nav-item-dropdown>
-        <b-nav-item href="#"><img class="img-xs rounded-circle" src="../assets/images/faces/face4.jpg" alt="profile image"></b-nav-item>
-      </b-navbar-nav>
-    </b-collapse>
+    </b-navbar-nav>
   </b-navbar>
   
 </template>
 
-<script lang="js">
+<script>
 export default {
+  methods: {
+    toggleSidebar(){
+      this.$sidebar.toggleSidebar()
+    }
+  }
 }
 </script>
+
 
 <style scoped lang="scss">
 
