@@ -1,6 +1,11 @@
+
 .sidebar-mini {
+    .main-header .logo-header .nav-toggle-sidebar{
+        left: 80px;
+    }
     #sidebar-start{
         position: fixed;
+        
         width: 64px;
         ul.nav li.nav-item.nav-menu a.nav-link {
             justify-content: center;
@@ -36,10 +41,22 @@
     }
     .brand-img-full{
         display:block;
+        img{
+            width: 200px;
+        }
     }
+}
+.main-header .logo-header .more {
+    background: transparent;
+    border: 0;
+    font-size: 26px;
+    padding: 0;
+    opacity: 0;
 }
 #sidebar-start{
     position: fixed;
+    top: 65px;
+    z-index: 1001;
     ul.nav li.nav-item.nav-menu a.nav-link.active {
         border-right: 3px solid #1d7af3;
         font-weight: bold;
@@ -51,6 +68,10 @@
 .main-panel{
     margin-left:255px;
     width: calc(100% - 255px);
+}
+.main-panel .content-wrapper {
+    min-height: calc(100% - 123px);
+    margin-top: 55px;
 }
 @media (max-width: 991px){
     
@@ -65,6 +86,7 @@
     
 }
 @media (max-width: 768px){
+    
     .main-header .logo-header{
         width:255px;
         background: none;
@@ -72,18 +94,33 @@
             display:none;
         }
         .brand-img-full{
-            display:block;
+            display: flex;
+            justify-content: center;
         }
+    }
+    .main-header .logo-header .more {
+        opacity: 1;
+        position: absolute;
+        right: 20px;
+        color: #545454;
+        cursor: pointer;
     }
     #sidebar-start{
         position: fixed;
+        top: 56px;
+        z-index: 99999;
         left: 0px;
         -webkit-transition: all 0.25s ease-out;
         transition: all 0.25s ease-out;
     }
     .main-panel{
-        width: calc(100%);
+        width: 100%;
+        transition: all .5s;
         margin-left:0px;
+    }
+    
+    .topbar_open .main-panel {
+        transform: translate3d(0, 125px, 0) !important;
     }
     .sidebar-mini {
         .main-header .logo-header{
@@ -93,7 +130,14 @@
                 display:none;
             }
             .brand-img-full{
-                display:block;
+                display: flex;
+                justify-content: center;
+            }
+        }
+        .main-header .logo-header .nav-toggle-sidebar{
+            left: 20px;
+            i.fa{
+                color: #545454!important;
             }
         }
         #sidebar-start{
@@ -103,21 +147,11 @@
         .main-panel{
             width: calc(100%);
             margin-left:0px;
+            transition: all .5s;
         }
         
         
     }
-    #navbar_start div.navbar-brand-wrapper{
-        width:255px;
-        background: none;
-        .brand-img-mini{
-            
-            display:none;
-        }
-        .brand-img-full{
-            display:block;
-        }
-        
-    }
+
 
 }
