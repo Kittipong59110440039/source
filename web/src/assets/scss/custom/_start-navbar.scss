@@ -1,4 +1,68 @@
+.main-header {
+    min-height: 55px;
+    width: 100%;
+    // background: linear-gradient(88deg, #318be3, #04befe);
+    background: #fff;
+    position: fixed;
+    z-index: 1001;
+    border-bottom: 1px solid #eee;
+}
+.main-header .logo-header {
+    float: left;
+    width: 255px;
+    height: 55px;
+    line-height: 50px;
+    color: #333333;
+    z-index: 1001;
+    font-size: 18px;
+    font-weight: 600;
+    padding-left: 15px;
+    padding-right: 15px;
+    z-index: 1001;
+    display: inline-block;
+}
+.navbar-header {
+    padding: 0px 15px;
+}
+
+@media screen and (max-width: 991px){
+    .main-header {
+        transition: all .5s;
+    }
+}
 #navbar_start{
+    .input-group {
+        position: relative;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+        align-items: stretch;
+        width: 100%;
+    }
+    .input-group-text {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        padding: .375rem .75rem;
+        margin-bottom: 0;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #495057;
+        text-align: center;
+        white-space: nowrap;
+        border-radius: .25rem;
+        border: 0;
+        background: transparent;
+    }
+    height: 56px;
     .navbar-nav .dropdown-menu {
         position: absolute;
     }

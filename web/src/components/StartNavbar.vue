@@ -1,13 +1,26 @@
 <template lang="html">
-  <b-navbar toggleable="sm" class="fixed-top py-0 px-0" type="dark" variant="info" id="navbar_start">
-    <div class="text-center navbar-brand-wrapper d-flex align-items-top justify-content-center">
-      <a class="navbar-brand brand-logo brand-img-full" href="/" ><img src="../assets/images/logo.svg" alt="logo"/></a>
-      <a class="navbar-brand brand-logo brand-img-mini" href="/" ><img src="../assets/images/logo-mini.svg" style="width:50px" alt="logo"/></a>
+  <div class="main-header">
+    <div class="logo-header">
+        <a class="brand-img-full" href="/" ><img src="../assets/images/logo.svg" alt="logo"/></a>
+        <a class="brand-img-mini" href="/" ><img src="../assets/images/logo-mini.svg" style="width:40px" alt="logo"/></a>
     </div>
+
+    <b-navbar toggleable="sm" type="dark"  id="navbar_start">
+
     <b-navbar-nav class="nav-toggle-sidebar">
-      <b-nav-item @click="toggleSidebar()" class="px-2 "><i class="fa fas fa-bars text-white"></i></b-nav-item>
-      
+      <b-nav-item @click="toggleSidebar()" class="px-2 "><i class="fa fas fa-bars text-white"></i></b-nav-item> 
     </b-navbar-nav>
+    <form class="navbar-left navbar-form nav-search mr-md-3" action="">
+      <div class="input-group">
+        <input type="text" placeholder="Search ..." class="form-control">
+        <div class="input-group-append">
+          <span class="input-group-text">
+            <i class="la la-search search-icon"></i>
+          </span>
+        </div>
+      </div>
+    </form>
+
     <b-navbar-nav class="ml-auto mr-3">
         <b-nav-item-dropdown right class="preview-list">
           <template slot="button-content">
@@ -52,7 +65,6 @@
           <template slot="button-content" >
             <div class="count-indicator img-flag">
               <img class=" mr-1" src="../assets/images/flags/EN.svg" style="width:30px;" alt="Flag image">
-              <!-- <span>Kittipong</span> -->
             </div>
           </template>
           <b-dropdown-item href="#" class="flag-item active"><img class=" mr-1" src="../assets/images/flags/EN.svg" style="width:30px;" alt="Flag image">&nbsp;English</b-dropdown-item>
@@ -70,6 +82,8 @@
         </b-nav-item-dropdown>
     </b-navbar-nav>
   </b-navbar>
+  </div>
+  
   
 </template>
 
