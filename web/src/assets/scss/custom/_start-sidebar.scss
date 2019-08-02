@@ -1,8 +1,5 @@
 
 .sidebar-mini {
-    .main-header .logo-header .nav-toggle-sidebar{
-        left: 80px;
-    }
     #sidebar-start{
         position: fixed;
         
@@ -26,23 +23,17 @@
     }
     .main-header .logo-header{
         width:64px;
-        .brand-img-full{
-            display:none;
-        }
-        .brand-img-mini{
-            display:block;
-        }
+    }
+    .main-header .logo-header .nav-toggle-sidebar{
+        left:21px;
     }
        
 }
 .main-header .logo-header{
-    .brand-img-mini{
-        display:none;
-    }
     .brand-img-full{
         display:block;
         img{
-            width: 200px;
+            width: 180px;
         }
     }
 }
@@ -57,6 +48,9 @@
     position: fixed;
     top: 65px;
     z-index: 1001;
+    ul.nav li.nav-item.nav-menu a.nav-link {
+        padding: 1rem 1.3rem;
+    }
     ul.nav li.nav-item.nav-menu a.nav-link.active {
         border-right: 3px solid #1d7af3;
         font-weight: bold;
@@ -70,6 +64,7 @@
     width: calc(100% - 255px);
 }
 .main-panel .content-wrapper {
+    background: #f4f4f4;
     min-height: calc(100% - 123px);
     margin-top: 55px;
 }
@@ -90,9 +85,6 @@
     .main-header .logo-header{
         width:255px;
         background: none;
-        .brand-img-mini{
-            display:none;
-        }
         .brand-img-full{
             display: flex;
             justify-content: center;
@@ -102,7 +94,7 @@
         opacity: 1;
         position: absolute;
         right: 20px;
-        color: #545454;
+        color: #ffffff;
         cursor: pointer;
     }
     #sidebar-start{
@@ -125,19 +117,11 @@
     .sidebar-mini {
         .main-header .logo-header{
             width:255px;
+            padding-left: 0px;
             background: none;
-            .brand-img-mini{
-                display:none;
-            }
             .brand-img-full{
                 display: flex;
                 justify-content: center;
-            }
-        }
-        .main-header .logo-header .nav-toggle-sidebar{
-            left: 20px;
-            i.fa{
-                color: #545454!important;
             }
         }
         #sidebar-start{

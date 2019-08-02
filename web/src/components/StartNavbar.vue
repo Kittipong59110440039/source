@@ -2,12 +2,11 @@
   <div class="main-header">
     <div class="logo-header">
         <button @click="toggleSidebar()" class="nav-toggle-sidebar px-0 py-0"><i class="fa fas fa-bars text-white" style="font-size:1em;"></i></button> 
-        <a class="brand-img-full" href="/" ><img src="../assets/images/logo.svg" alt="logo"/></a>
-        <a class="brand-img-mini" href="/" ><img src="../assets/images/logo-mini.svg" style="width:40px" alt="logo"/></a>
+        <a class="brand-img-full" href="/" ><img src="../assets/images/favicon.png" alt="logo"/></a>
         <button class="topbar-toggler more" @click="toggleNavItem()"><i class="fa fas fa-ellipsis-v" style="font-size:0.7em;"></i></button>
     </div>
 
-    <b-navbar class="navbar-header-start navbar-expan-start" type="dark"  id="navbar_start">
+    <b-navbar class="navbar-header-start navbar-expan-start" type="dark" variant="white"  id="navbar_start">
       
         <form class="navbar-left navbar-form nav-search mr-md-3 " action="">
           <div class="input-group">
