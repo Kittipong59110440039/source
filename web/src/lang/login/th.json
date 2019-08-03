@@ -1,0 +1,10 @@
+{
+    "lbl_signin" : "ลงชื่อเข้าใช้" ,
+    "lbl_with_social": "เข้าสู่ระบบผ่านโซเชียล",
+    "lbl_hr_or": "หรือ",
+    "lbl_input_username": "ชื่อผู้ใช้หรืออีเมล",
+    "lbl_input_password": "รหัสผ่าน",
+    "lbl_remember_me": "จดจำฉัน",
+    "lbl_forgot_password": "ลืมรหัสผ่าน?",
+    "lbl_login": "เข้าสู่ระบบ"
+}

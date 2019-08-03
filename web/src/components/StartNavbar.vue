@@ -62,11 +62,12 @@
             <b-nav-item-dropdown right class=" flag-list pr-0">
               <template slot="button-content" >
                 <div class="count-indicator  img-flag ">
-                  <img class=" " src="../assets/images/flags/EN.svg" style="width:30px;" alt="Flag image">
+                  <img class=" " src="../assets/images/flags/EN.svg" style="width:30px;" alt="Flag image" v-if="$i18n.locale == 'en'">
+                  <img class=" " src="../assets/images/flags/TH.jpg" style="width:30px;" alt="Flag image" v-else>
                 </div>
               </template>
-              <b-dropdown-item href="#" class="flag-item active"><img class=" mr-1" src="../assets/images/flags/EN.svg" style="width:30px;" alt="Flag image">&nbsp;English</b-dropdown-item>
-              <b-dropdown-item href="#" class="flag-item "><img class=" mr-1" src="../assets/images/flags/TH.jpg" style="width:30px;" alt="Flag image">&nbsp;Thai</b-dropdown-item>
+              <b-dropdown-item  @click="setLanguage('en')" href="#" class="flag-item" :class="{'active' : $i18n.locale == 'en'}"><img class=" mr-1" src="../assets/images/flags/EN.svg" style="width:30px;" alt="Flag image">&nbsp;English</b-dropdown-item>
+              <b-dropdown-item @click="setLanguage('th')" href="#" class="flag-item " :class="{'active' : $i18n.locale == 'th'}"><img class=" mr-1" src="../assets/images/flags/TH.jpg" style="width:30px;" alt="Flag image">&nbsp;Thai</b-dropdown-item>
             </b-nav-item-dropdown>
             <b-nav-item-dropdown right >
               <template slot="button-content">
@@ -93,6 +94,10 @@ export default {
     },
     toggleNavItem(){
       this.$navitem.toggleNavItem()
+    },
+    setLanguage(lang){
+      this.$i18n.locale = lang
+      this.$store.dispatch('setLanguage', lang)
     }
   }
 }

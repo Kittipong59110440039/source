@@ -1,0 +1,10 @@
+{
+    "lbl_signin" : "Sign in" ,
+    "lbl_with_social": "with your social network",
+    "lbl_hr_or": "or",
+    "lbl_input_username": "Username or Email",
+    "lbl_input_password": "Password",
+    "lbl_remember_me": "Remember me",
+    "lbl_forgot_password": "Forgot your password?",
+    "lbl_login": "Login"
+}
